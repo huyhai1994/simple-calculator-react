@@ -1,3 +1,17 @@
 .calculator {
     color: black;
+    width: 350px;
+    margin: auto;
+}
+
+.calculator__input-number {
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    width: auto;
+    height: 40px;
+    font-size: 30px;
+    text-align: left;
+    border-radius: 5px;
 }
