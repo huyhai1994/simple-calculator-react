@@ -1,4 +1,6 @@
 import {Component} from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 
 class Calculator extends Component {
     constructor(props) {
@@ -28,16 +30,18 @@ class Calculator extends Component {
     }
 
     render() {
-        return (<div>
-            <input type="number" onChange={e => this.setState({number1: parseInt(e.target.value)})}/>
-            <input type="number" onChange={e => this.setState({number2: parseInt(e.target.value)})}/>
-            <button onClick={this.add}>+</button>
-            <button onClick={this.subtract}>-</button>
-            <button onClick={this.multiply}>*</button>
-            <button onClick={this.divide}>/</button>
-            <h2>Result: {this.state.result !== undefined ? this.state.result : "Enter numbers and perform an operation"}</h2>
-            {/*TODO:
+        return (<div className="container">
+            <div>
+                <input type="number" onChange={e => this.setState({number1: parseInt(e.target.value)})}/>
+                <input type="number" onChange={e => this.setState({number2: parseInt(e.target.value)})}/>
+                <button onClick={this.add}>+</button>
+                <button onClick={this.subtract}>-</button>
+                <button onClick={this.multiply}>*</button>
+                <button onClick={this.divide}>/</button>
+                <h2>Result: {this.state.result !== undefined ? this.state.result : "Enter numbers and perform an operation"}</h2>
+                {/*TODO:
                 In the render method, you're using this.state.result without checking if it's defined. To fix this, you can initialize the result state with a default value or use conditional rendering to display a message when the result is not available:*/}
+            </div>
         </div>);
     }
 }
